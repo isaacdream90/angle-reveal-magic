@@ -52,7 +52,7 @@ const HeadsetModel = ({ scrollProgress }: HeadsetModelProps) => {
   });
 
   return (
-    <group ref={groupRef} scale={2}>
+    <group ref={groupRef} scale={10}>
       <primitive object={clonedScene} />
     </group>
   );
