@@ -72,7 +72,10 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="relative bg-background">
+    <main className="relative bg-background overflow-hidden">
+      {/* Background gradient overlay */}
+      <div className="fixed inset-0 bg-gradient-hero pointer-events-none z-0" />
+      
       {/* 3D Scene - Fixed background */}
       <Scene3D scrollProgress={scrollProgress} />
       
@@ -92,7 +95,7 @@ const Index = () => {
         <CTASection />
         
         {/* Footer */}
-        <footer className="relative z-10 py-12 border-t border-border/30">
+        <footer className="relative z-10 py-12 border-t border-primary/20">
           <div className="container mx-auto px-6 text-center">
             <p className="text-muted-foreground text-sm">
               © 2025 NOVA Audio. All rights reserved.
