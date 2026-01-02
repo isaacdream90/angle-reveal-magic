@@ -1,6 +1,6 @@
 import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { MeshDistortMaterial, RoundedBox } from '@react-three/drei';
+import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface HeadsetModelProps {
@@ -9,6 +9,10 @@ interface HeadsetModelProps {
 
 const HeadsetModel = ({ scrollProgress }: HeadsetModelProps) => {
   const groupRef = useRef<THREE.Group>(null);
+  const { scene } = useGLTF('/models/headset.glb');
+  
+  // Clone the scene to avoid issues with multiple instances
+  const clonedScene = useMemo(() => scene.clone(), [scene]);
   
   // Calculate rotation based on scroll
   const targetRotation = useMemo(() => {
@@ -48,112 +52,13 @@ const HeadsetModel = ({ scrollProgress }: HeadsetModelProps) => {
   });
 
   return (
-    <group ref={groupRef} scale={1.2}>
-      {/* Headband */}
-      <mesh position={[0, 1.2, 0]} rotation={[0, 0, 0]}>
-        <torusGeometry args={[1.3, 0.12, 16, 100, Math.PI]} />
-        <meshStandardMaterial 
-          color="#1a1a2e" 
-          metalness={0.9} 
-          roughness={0.2}
-        />
-      </mesh>
-      
-      {/* Headband Cushion */}
-      <mesh position={[0, 1.35, 0]} rotation={[0, 0, 0]}>
-        <torusGeometry args={[1.2, 0.08, 8, 50, Math.PI]} />
-        <meshStandardMaterial 
-          color="#2d2d44" 
-          metalness={0.3} 
-          roughness={0.8}
-        />
-      </mesh>
-
-      {/* Left Ear Cup */}
-      <group position={[-1.3, 0, 0]}>
-        {/* Outer shell */}
-        <mesh>
-          <cylinderGeometry args={[0.8, 0.85, 0.4, 32]} />
-          <meshStandardMaterial 
-            color="#0a0a14"
-            metalness={0.95}
-            roughness={0.1}
-          />
-        </mesh>
-        {/* Inner ring */}
-        <mesh position={[0, 0, 0.15]} rotation={[Math.PI / 2, 0, 0]}>
-          <torusGeometry args={[0.6, 0.08, 16, 32]} />
-          <meshStandardMaterial 
-            color="#00d4ff"
-            emissive="#00d4ff"
-            emissiveIntensity={0.5}
-            metalness={0.8}
-            roughness={0.2}
-          />
-        </mesh>
-        {/* Cushion */}
-        <mesh position={[0, 0, 0.22]}>
-          <cylinderGeometry args={[0.65, 0.65, 0.15, 32]} />
-          <meshStandardMaterial 
-            color="#1a1a2e"
-            metalness={0.2}
-            roughness={0.9}
-          />
-        </mesh>
-        {/* Connection arm */}
-        <mesh position={[0.2, 0.6, 0]} rotation={[0, 0, -0.3]}>
-          <boxGeometry args={[0.15, 0.8, 0.1]} />
-          <meshStandardMaterial 
-            color="#1a1a2e"
-            metalness={0.9}
-            roughness={0.2}
-          />
-        </mesh>
-      </group>
-
-      {/* Right Ear Cup */}
-      <group position={[1.3, 0, 0]}>
-        {/* Outer shell */}
-        <mesh>
-          <cylinderGeometry args={[0.8, 0.85, 0.4, 32]} />
-          <meshStandardMaterial 
-            color="#0a0a14"
-            metalness={0.95}
-            roughness={0.1}
-          />
-        </mesh>
-        {/* Inner ring */}
-        <mesh position={[0, 0, 0.15]} rotation={[Math.PI / 2, 0, 0]}>
-          <torusGeometry args={[0.6, 0.08, 16, 32]} />
-          <meshStandardMaterial 
-            color="#00d4ff"
-            emissive="#00d4ff"
-            emissiveIntensity={0.5}
-            metalness={0.8}
-            roughness={0.2}
-          />
-        </mesh>
-        {/* Cushion */}
-        <mesh position={[0, 0, 0.22]}>
-          <cylinderGeometry args={[0.65, 0.65, 0.15, 32]} />
-          <meshStandardMaterial 
-            color="#1a1a2e"
-            metalness={0.2}
-            roughness={0.9}
-          />
-        </mesh>
-        {/* Connection arm */}
-        <mesh position={[-0.2, 0.6, 0]} rotation={[0, 0, 0.3]}>
-          <boxGeometry args={[0.15, 0.8, 0.1]} />
-          <meshStandardMaterial 
-            color="#1a1a2e"
-            metalness={0.9}
-            roughness={0.2}
-          />
-        </mesh>
-      </group>
+    <group ref={groupRef} scale={2}>
+      <primitive object={clonedScene} />
     </group>
   );
 };
+
+// Preload the model
+useGLTF.preload('/models/headset.glb');
 
 export default HeadsetModel;
