@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection';
 import ProductSection from '@/components/ProductSection';
 import SpecsSection from '@/components/SpecsSection';
 import CTASection from '@/components/CTASection';
+import Navbar from '@/components/Navbar';
 
 const productSections = [
   {
@@ -73,6 +74,9 @@ const Index = () => {
 
   return (
     <main className="relative bg-background overflow-hidden">
+      {/* Navbar */}
+      <Navbar />
+      
       {/* Background gradient overlay */}
       <div className="fixed inset-0 bg-gradient-hero pointer-events-none z-0" />
       
