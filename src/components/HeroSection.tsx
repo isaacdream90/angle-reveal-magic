@@ -16,26 +16,27 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          Professional Silent Event System
+          Introducing
         </motion.span>
         
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6"
+          className="text-6xl md:text-8xl lg:text-9xl font-display font-bold mb-6"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          <span className="text-gradient glow-text">SX-809</span>
+          <span className="text-gradient glow-text">NOVA</span>
+          <span className="text-foreground"> PRO</span>
         </motion.h1>
         
         <motion.p 
-          className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto mb-12"
+          className="text-muted-foreground text-xl md:text-2xl max-w-2xl mx-auto mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          Professional RF Silent System Headphones for Rental & Large-Scale Events. 
-          Reliable, comfortable, and crystal-clear audio for silent discos, conferences, and more.
+          Experience sound like never before. Immersive audio meets 
+          revolutionary design.
         </motion.p>
         
         <motion.div 
@@ -44,25 +45,25 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
         >
-          <button className="px-8 py-4 glossy-button text-primary-foreground font-display font-semibold rounded-full transition-all duration-300 hover:scale-105">
+          <button className="px-8 py-4 bg-gradient-primary text-primary-foreground font-display font-semibold rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 glow-effect">
             Pre-Order Now
           </button>
-          <button className="px-8 py-4 glass-card text-foreground font-display font-semibold rounded-full hover:bg-primary/10 transition-all duration-300 neon-glow-intense hover:neon-glow-intense">
+          <button className="px-8 py-4 neon-border text-foreground font-display font-semibold rounded-full hover:bg-primary/10 transition-all duration-300">
             Learn More
           </button>
         </motion.div>
 
-        {/* Category tags with glossy effect */}
+        {/* Category tags */}
         <motion.div 
           className="flex flex-wrap gap-3 justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.1 }}
         >
-          {['Silent Disco', 'Fitness', 'Yoga', 'Conferences', 'Festivals'].map((tag) => (
+          {['Party', 'Fa Ins', 'Cinema', 'Corporate'].map((tag) => (
             <span 
               key={tag}
-              className="px-6 py-2 rounded-full glass-card text-foreground/90 text-sm font-medium hover:neon-glow-intense transition-all cursor-pointer"
+              className="px-6 py-2 rounded-full border border-primary/30 text-foreground/80 text-sm font-medium hover:border-primary/60 hover:bg-primary/5 transition-all cursor-pointer"
             >
               {tag}
             </span>
