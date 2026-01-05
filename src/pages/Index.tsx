@@ -77,8 +77,41 @@ const Index = () => {
       {/* Navbar */}
       <Navbar />
       
-      {/* Background gradient overlay */}
-      <div className="fixed inset-0 bg-gradient-hero pointer-events-none z-0" />
+      {/* Enhanced multi-layer background */}
+      <div 
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          background: `
+            radial-gradient(ellipse 80% 60% at 70% 30%, hsl(270 80% 55% / 0.2) 0%, transparent 60%),
+            radial-gradient(ellipse 60% 50% at 30% 70%, hsl(310 100% 60% / 0.15) 0%, transparent 50%),
+            radial-gradient(ellipse 100% 80% at 50% 50%, hsl(220 100% 60% / 0.08) 0%, transparent 70%),
+            linear-gradient(180deg, hsl(230 35% 3%) 0%, hsl(240 40% 6%) 50%, hsl(250 45% 4%) 100%)
+          `,
+        }}
+      />
+      
+      {/* Animated gradient orbs */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div 
+          className="absolute w-[600px] h-[600px] rounded-full animate-pulse-glow"
+          style={{
+            top: '10%',
+            right: '10%',
+            background: 'radial-gradient(circle, hsl(185 100% 50% / 0.15) 0%, transparent 70%)',
+            filter: 'blur(60px)',
+          }}
+        />
+        <div 
+          className="absolute w-[500px] h-[500px] rounded-full animate-pulse-glow"
+          style={{
+            bottom: '20%',
+            left: '5%',
+            background: 'radial-gradient(circle, hsl(310 100% 60% / 0.12) 0%, transparent 70%)',
+            filter: 'blur(80px)',
+            animationDelay: '1s',
+          }}
+        />
+      </div>
       
       {/* 3D Scene - Fixed background */}
       <Scene3D scrollProgress={scrollProgress} />
