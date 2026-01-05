@@ -45,25 +45,25 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
         >
-          <button className="px-8 py-4 bg-gradient-primary text-primary-foreground font-display font-semibold rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 glow-effect">
+          <button className="px-8 py-4 glossy-button text-primary-foreground font-display font-semibold rounded-full transition-all duration-300 hover:scale-105">
             Pre-Order Now
           </button>
-          <button className="px-8 py-4 neon-border text-foreground font-display font-semibold rounded-full hover:bg-primary/10 transition-all duration-300">
+          <button className="px-8 py-4 glass-card text-foreground font-display font-semibold rounded-full hover:bg-primary/10 transition-all duration-300 neon-glow-intense hover:neon-glow-intense">
             Learn More
           </button>
         </motion.div>
 
-        {/* Category tags */}
+        {/* Category tags with glossy effect */}
         <motion.div 
           className="flex flex-wrap gap-3 justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.1 }}
         >
-          {['Party', 'Fa Ins', 'Cinema', 'Corporate'].map((tag) => (
+          {['Party', 'Fitness', 'Cinema', 'Corporate'].map((tag) => (
             <span 
               key={tag}
-              className="px-6 py-2 rounded-full border border-primary/30 text-foreground/80 text-sm font-medium hover:border-primary/60 hover:bg-primary/5 transition-all cursor-pointer"
+              className="px-6 py-2 rounded-full glass-card text-foreground/90 text-sm font-medium hover:neon-glow-intense transition-all cursor-pointer"
             >
               {tag}
             </span>
