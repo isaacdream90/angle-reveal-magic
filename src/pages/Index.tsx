@@ -8,50 +8,50 @@ import Navbar from '@/components/Navbar';
 
 const productSections = [
   {
-    title: 'Immersive Sound',
-    subtitle: '01 — Audio',
-    description: 'Custom 50mm titanium-coated drivers deliver studio-quality audio with exceptional clarity across the entire frequency spectrum. Feel every beat, hear every detail.',
+    title: 'RF Silent System',
+    subtitle: '01 — Technology',
+    description: 'Professional RF technology ensures reliable audio transmission with minimal latency and strong interference resistance. Available in 3, 10, or 45 channel configurations.',
     features: [
-      'Hi-Res Audio certified',
-      'Custom-tuned acoustic chambers',
-      'Dynamic bass enhancement',
-      'Crystal-clear highs',
+      'Multi-channel capability (3/10/45)',
+      'Dual PLL frequency stability',
+      'Minimal signal dropouts',
+      'Indoor & outdoor reliable',
     ],
     align: 'left' as const,
   },
   {
-    title: 'Silence On Demand',
-    subtitle: '02 — Noise Cancellation',
-    description: 'Industry-leading active noise cancellation with 8 precision microphones. Block out the world or let it in with transparency mode.',
+    title: 'Crystal Clear Audio',
+    subtitle: '02 — Sound Quality',
+    description: '40mm Mylar drivers deliver balanced, high-quality audio across music, speech, and guided instruction. SNR >75dB with less than 1% distortion.',
     features: [
-      'Adaptive ANC technology',
-      'Transparency mode',
-      '8 beam-forming microphones',
-      'Wind noise reduction',
+      '30Hz - 20kHz frequency response',
+      'Signal-to-Noise Ratio >75dB',
+      'Punchy bass for silent discos',
+      'Clear vocals for meetings',
     ],
     align: 'right' as const,
   },
   {
-    title: 'All-Day Comfort',
-    subtitle: '03 — Design',
-    description: 'Aerospace-grade aluminum frame with memory foam cushions. Designed for hours of comfortable listening without fatigue.',
+    title: 'RGB LED Identification',
+    subtitle: '03 — Visual System',
+    description: 'Bright RGB LEDs make channel identification effortless in low-light environments. Perfect for silent discos, festivals, and night events.',
     features: [
-      'Memory foam ear cushions',
-      'Adjustable headband',
-      'Lightweight construction',
-      'Breathable materials',
+      'Keypad-controlled LED system',
+      'Instant channel identification',
+      'Easy switching for users',
+      'Reduces staff assistance needs',
     ],
     align: 'left' as const,
   },
   {
-    title: 'Endless Power',
-    subtitle: '04 — Battery',
-    description: 'Up to 60 hours of playback on a single charge. Quick charge gives you 5 hours of listening in just 10 minutes.',
+    title: 'All-Day Comfort',
+    subtitle: '04 — Ergonomics',
+    description: 'Lightweight over-ear design with comfortable cushions for extended wear during long events, yoga sessions, or multi-hour conferences.',
     features: [
-      '60-hour battery life',
-      'USB-C fast charging',
-      '10-min quick charge',
-      'Battery optimization AI',
+      'Passive noise isolation',
+      'Rotary volume control',
+      'Lightweight construction',
+      'Perfect for long sessions',
     ],
     align: 'right' as const,
   },
@@ -135,7 +135,7 @@ const Index = () => {
         <footer className="relative z-10 py-12 border-t border-primary/20">
           <div className="container mx-auto px-6 text-center">
             <p className="text-muted-foreground text-sm">
-              © 2025 NOVA Audio. All rights reserved.
+              © 2026 SX-809 Silent Event Headphones. Professional Rental Solutions.
             </p>
           </div>
         </footer>

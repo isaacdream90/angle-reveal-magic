@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
 const specs = [
-  { label: 'Driver Size', value: '50mm', unit: 'Titanium' },
-  { label: 'Frequency', value: '5Hz-40kHz', unit: 'Range' },
-  { label: 'Battery Life', value: '60', unit: 'Hours' },
-  { label: 'Weight', value: '285', unit: 'Grams' },
+  { label: 'Speaker Size', value: '40mm', unit: 'Mylar Drivers' },
+  { label: 'Frequency', value: '30Hz-20kHz', unit: 'Response' },
+  { label: 'Battery Life', value: '8-10', unit: 'Hours' },
+  { label: 'Channels', value: '3/10/45', unit: 'Available' },
 ];
 
 const SpecsSection = () => {
@@ -19,10 +19,10 @@ const SpecsSection = () => {
           className="text-center mb-16"
         >
           <span className="text-primary font-display text-sm tracking-[0.3em] uppercase mb-4 block">
-            Technical Excellence
+            Technical Specifications
           </span>
           <h2 className="text-4xl md:text-6xl font-display font-bold">
-            <span className="text-gradient">Precision</span> Engineered
+            <span className="text-gradient">Professional</span> Grade
           </h2>
         </motion.div>
         
@@ -63,17 +63,17 @@ const SpecsSection = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-display font-bold mb-4">
-                Crafted for <span className="text-gradient">Perfection</span>
+                Built for <span className="text-gradient">Rental Pros</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Every component is meticulously designed and tested to deliver 
-                an unparalleled audio experience. From the custom-tuned drivers 
-                to the aerospace-grade materials, NOVA PRO represents the 
-                pinnacle of headphone engineering.
+                The SX-809 is specifically designed for professional rental companies 
+                and event organizers. Durable construction, stable RF transmission, 
+                and RGB LED channel identification ensure reliable performance 
+                across hundreds of events.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              {['Active Noise Cancellation', 'Spatial Audio', 'Adaptive EQ', 'Bluetooth 5.3', 'USB-C Fast Charge', 'Multi-Device'].map((feature, i) => (
+              {['RF Silent System', 'Dual PLL', 'RGB LED Lights', 'SNR >75dB', 'Distortion <1%', 'Li-Po 500mAh'].map((feature, i) => (
                 <span 
                   key={feature}
                   className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium"

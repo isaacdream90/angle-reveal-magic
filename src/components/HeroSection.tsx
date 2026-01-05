@@ -16,27 +16,26 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          Introducing
+          Professional Silent Event System
         </motion.span>
         
         <motion.h1 
-          className="text-6xl md:text-8xl lg:text-9xl font-display font-bold mb-6"
+          className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          <span className="text-gradient glow-text">NOVA</span>
-          <span className="text-foreground"> PRO</span>
+          <span className="text-gradient glow-text">SX-809</span>
         </motion.h1>
         
         <motion.p 
-          className="text-muted-foreground text-xl md:text-2xl max-w-2xl mx-auto mb-12"
+          className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          Experience sound like never before. Immersive audio meets 
-          revolutionary design.
+          Professional RF Silent System Headphones for Rental & Large-Scale Events. 
+          Reliable, comfortable, and crystal-clear audio for silent discos, conferences, and more.
         </motion.p>
         
         <motion.div 
@@ -60,7 +59,7 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.1 }}
         >
-          {['Party', 'Fitness', 'Cinema', 'Corporate'].map((tag) => (
+          {['Silent Disco', 'Fitness', 'Yoga', 'Conferences', 'Festivals'].map((tag) => (
             <span 
               key={tag}
               className="px-6 py-2 rounded-full glass-card text-foreground/90 text-sm font-medium hover:neon-glow-intense transition-all cursor-pointer"
