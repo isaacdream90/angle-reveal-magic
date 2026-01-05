@@ -28,8 +28,8 @@ const Navbar = () => {
   const navLinks = [
     { label: 'Features', href: '#features' },
     { label: 'Specs', href: '#specs' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'Support', href: '#support' },
+    { label: 'Applications', href: '#applications' },
+    { label: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -45,7 +45,7 @@ const Navbar = () => {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
           <span className="text-2xl font-display font-bold text-gradient glow-text">
-            NOVA
+            SX-809
           </span>
         </a>
 
@@ -78,7 +78,7 @@ const Navbar = () => {
           </button>
 
           <button className="px-6 py-2.5 bg-gradient-primary text-primary-foreground font-display font-semibold rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 glow-effect text-sm">
-            Pre-Order
+            Get Quote
           </button>
         </div>
 
@@ -127,7 +127,7 @@ const Navbar = () => {
               </a>
             ))}
             <button className="mt-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-display font-semibold rounded-full">
-              Pre-Order
+              Get Quote
             </button>
           </div>
         </motion.div>
