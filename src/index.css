@@ -6,6 +6,59 @@
 
 @layer base {
   :root {
+    --background: 220 20% 97%;
+    --foreground: 230 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 30% 15%;
+
+    --primary: 200 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 90%;
+    --secondary-foreground: 230 30% 15%;
+
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 300 80% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 85%;
+    --input: 220 15% 90%;
+    --ring: 200 100% 40%;
+
+    --radius: 0.75rem;
+
+    /* Neon glow colors (light mode - more subtle) */
+    --neon-cyan: 200 100% 40%;
+    --neon-magenta: 300 80% 50%;
+    --neon-purple: 270 70% 50%;
+    --neon-blue: 220 90% 55%;
+
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 40%) 0%, hsl(300 80% 50%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(220 20% 97%) 0%, hsl(220 15% 92%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(270 70% 50% / 0.15) 0%, hsl(300 80% 50% / 0.05) 50%, transparent 80%);
+    --gradient-text: linear-gradient(90deg, hsl(200 100% 40%) 0%, hsl(300 80% 50%) 100%);
+    --gradient-hero: radial-gradient(ellipse at 70% 30%, hsl(270 70% 50% / 0.1) 0%, hsl(300 80% 50% / 0.05) 40%, transparent 70%);
+    
+    --shadow-glow-cyan: 0 0 20px hsl(200 100% 40% / 0.3), 0 0 40px hsl(200 100% 40% / 0.15);
+    --shadow-glow-magenta: 0 0 20px hsl(300 80% 50% / 0.3), 0 0 40px hsl(300 80% 50% / 0.15);
+    --shadow-glow-purple: 0 0 30px hsl(270 70% 50% / 0.3), 0 0 60px hsl(270 70% 50% / 0.1);
+    --shadow-soft: 0 25px 50px -12px hsl(0 0% 0% / 0.1);
+    
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  .dark {
     --background: 230 35% 5%;
     --foreground: 200 20% 95%;
 
@@ -34,8 +87,6 @@
     --input: 230 40% 15%;
     --ring: 185 100% 50%;
 
-    --radius: 0.75rem;
-
     /* Neon glow colors */
     --neon-cyan: 185 100% 50%;
     --neon-magenta: 310 100% 60%;
@@ -53,14 +104,6 @@
     --shadow-glow-magenta: 0 0 30px hsl(310 100% 60% / 0.4), 0 0 60px hsl(310 100% 60% / 0.2);
     --shadow-glow-purple: 0 0 40px hsl(270 80% 55% / 0.5), 0 0 80px hsl(270 80% 55% / 0.2);
     --shadow-soft: 0 25px 50px -12px hsl(0 0% 0% / 0.7);
-    
-    --font-display: 'Syne', sans-serif;
-    --font-body: 'Inter', sans-serif;
-  }
-
-  .dark {
-    --background: 230 35% 5%;
-    --foreground: 200 20% 95%;
   }
 }
 
