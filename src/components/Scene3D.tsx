@@ -1,7 +1,8 @@
 import { Canvas } from '@react-three/fiber';
-import { Environment, ContactShadows, PerspectiveCamera } from '@react-three/drei';
+import { Environment, ContactShadows } from '@react-three/drei';
 import { Suspense } from 'react';
 import HeadsetModel from './HeadsetModel';
+import AnimatedCamera from './AnimatedCamera';
 
 interface Scene3DProps {
   scrollProgress: number;
@@ -10,8 +11,9 @@ interface Scene3DProps {
 const Scene3D = ({ scrollProgress }: Scene3DProps) => {
   return (
     <div className="fixed inset-0 z-0">
-      <Canvas>
-        <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={50} />
+      <Canvas camera={{ position: [0, 0, 8], fov: 50 }}>
+        {/* Animated Camera */}
+        <AnimatedCamera scrollProgress={scrollProgress} />
         
         {/* Lighting - Enhanced neon glow aesthetic */}
         <ambientLight intensity={0.2} />
