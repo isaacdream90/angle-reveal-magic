@@ -4,6 +4,7 @@ import HeroSection from '@/components/HeroSection';
 import ProductSection from '@/components/ProductSection';
 import SpecsSection from '@/components/SpecsSection';
 import CTASection from '@/components/CTASection';
+import Navbar from '@/components/Navbar';
 
 const productSections = [
   {
@@ -73,6 +74,8 @@ const Index = () => {
 
   return (
     <main className="relative bg-background overflow-hidden">
+      <Navbar />
+      
       {/* Background gradient overlay */}
       <div className="fixed inset-0 bg-gradient-hero pointer-events-none z-0" />
       
@@ -81,18 +84,27 @@ const Index = () => {
       
       {/* Content sections */}
       <div className="relative z-10">
-        <HeroSection />
+        <section id="hero">
+          <HeroSection />
+        </section>
         
-        {productSections.map((section, index) => (
-          <ProductSection 
-            key={section.title}
-            {...section}
-            index={index}
-          />
-        ))}
+        <section id="features">
+          {productSections.map((section, index) => (
+            <ProductSection 
+              key={section.title}
+              {...section}
+              index={index}
+            />
+          ))}
+        </section>
         
-        <SpecsSection />
-        <CTASection />
+        <section id="specs">
+          <SpecsSection />
+        </section>
+        
+        <section id="cta">
+          <CTASection />
+        </section>
         
         {/* Footer */}
         <footer className="relative z-10 py-12 border-t border-primary/20">
