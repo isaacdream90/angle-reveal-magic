@@ -46,7 +46,7 @@ const Scene3D = ({ scrollProgress }: Scene3DProps) => {
             far={4}
             color="#8b5cf6"
           />
-          <Environment preset="night" />
+          {/* Removed Environment preset - using custom lighting instead */}
         </Suspense>
       </Canvas>
       
