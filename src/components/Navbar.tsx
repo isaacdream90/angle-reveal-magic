@@ -71,14 +71,14 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <button
+            <a
               key={link.target}
-              onClick={() => scrollToSection(link.target)}
+              href={`#${link.target}`}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors relative group"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-            </button>
+            </a>
           ))}
         </div>
 
@@ -124,13 +124,14 @@ const Navbar = () => {
           >
             <div className="flex flex-col p-4 gap-4">
               {navLinks.map((link) => (
-                <button
+                <a
                   key={link.target}
-                  onClick={() => scrollToSection(link.target)}
+                  href={`#${link.target}`}
+                  onClick={() => setMobileMenuOpen(false)}
                   className="text-left py-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.label}
-                </button>
+                </a>
               ))}
             </div>
           </motion.div>
