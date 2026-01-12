@@ -15,26 +15,49 @@ const Scene3D = ({ scrollProgress }: Scene3DProps) => {
         {/* Animated Camera */}
         <AnimatedCamera scrollProgress={scrollProgress} />
         
-        {/* Lighting - Enhanced neon glow aesthetic */}
-        <ambientLight intensity={0.2} />
-        <spotLight
-          position={[10, 10, 10]}
-          angle={0.3}
-          penumbra={1}
-          intensity={1.2}
+        {/* Enhanced Lighting for better product visibility */}
+        <ambientLight intensity={0.8} />
+        
+        {/* Main key light - bright white from front-top */}
+        <directionalLight
+          position={[5, 8, 10]}
+          intensity={2.5}
           castShadow
           color="#ffffff"
         />
-        <spotLight
-          position={[-10, -5, -10]}
-          angle={0.4}
-          penumbra={1}
-          intensity={0.8}
-          color="#00e5ff"
+        
+        {/* Fill light from opposite side */}
+        <directionalLight
+          position={[-8, 5, 5]}
+          intensity={1.5}
+          color="#ffffff"
         />
-        <pointLight position={[5, 5, 5]} intensity={0.6} color="#00e5ff" />
-        <pointLight position={[-5, -5, 5]} intensity={0.5} color="#ff00ff" />
-        <pointLight position={[0, -3, 0]} intensity={0.8} color="#8b5cf6" />
+        
+        {/* Top light for highlights */}
+        <spotLight
+          position={[0, 15, 0]}
+          angle={0.5}
+          penumbra={1}
+          intensity={2}
+          color="#ffffff"
+        />
+        
+        {/* Front spotlight for product focus */}
+        <spotLight
+          position={[0, 5, 15]}
+          angle={0.4}
+          penumbra={0.5}
+          intensity={2}
+          color="#ffffff"
+        />
+        
+        {/* Accent lights for RGB effect */}
+        <pointLight position={[5, 3, 5]} intensity={1.2} color="#00e5ff" />
+        <pointLight position={[-5, 3, 5]} intensity={1.2} color="#ff00ff" />
+        <pointLight position={[0, -2, 5]} intensity={1} color="#8b5cf6" />
+        
+        {/* Rim light from behind */}
+        <pointLight position={[0, 5, -10]} intensity={1.5} color="#ffffff" />
         
         <Suspense fallback={null}>
           <HeadsetModel scrollProgress={scrollProgress} />
