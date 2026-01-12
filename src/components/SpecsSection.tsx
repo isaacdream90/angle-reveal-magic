@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
 const specs = [
-  { label: 'Driver Size', value: '50mm', unit: 'Titanium' },
-  { label: 'Frequency', value: '5Hz-40kHz', unit: 'Range' },
-  { label: 'Battery Life', value: '60', unit: 'Hours' },
-  { label: 'Weight', value: '285', unit: 'Grams' },
+  { label: 'Speaker Size', value: '40mm', unit: 'Mylar' },
+  { label: 'Frequency', value: '20Hz-20kHz', unit: 'Range' },
+  { label: 'Battery Life', value: '10', unit: 'Hours' },
+  { label: 'S/N Ratio', value: '>75', unit: 'dB' },
 ];
 
 const SpecsSection = () => {
@@ -19,7 +19,7 @@ const SpecsSection = () => {
           className="text-center mb-16"
         >
           <span className="text-primary font-display text-sm tracking-[0.3em] uppercase mb-4 block">
-            Technical Excellence
+            Technical Data
           </span>
           <h2 className="text-4xl md:text-6xl font-display font-bold">
             <span className="text-gradient">Precision</span> Engineered
@@ -66,14 +66,13 @@ const SpecsSection = () => {
                 Crafted for <span className="text-gradient">Perfection</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Every component is meticulously designed and tested to deliver 
-                an unparalleled audio experience. From the custom-tuned drivers 
-                to the aerospace-grade materials, NOVA PRO represents the 
-                pinnacle of headphone engineering.
+                The SX-809 headphones are patented (Patent No. 101677, filed in Italy 
+                in June 2014), guaranteeing originality and quality. Every component 
+                is designed for an immersive and detailed listening experience.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              {['Active Noise Cancellation', 'Spatial Audio', 'Adaptive EQ', 'Bluetooth 5.3', 'USB-C Fast Charge', 'Multi-Device'].map((feature, i) => (
+              {['UHF/RF System', 'FM Modulation', 'RGB LED Lights', 'SPB Speakers', 'THD <1%', 'Channel Separation >30dB'].map((feature, i) => (
                 <span 
                   key={feature}
                   className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm font-medium"

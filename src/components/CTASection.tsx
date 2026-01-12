@@ -26,7 +26,7 @@ const CTASection = () => {
               viewport={{ once: true }}
               className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-display tracking-wider uppercase mb-8"
             >
-              Available Now
+              Surprising Harmonies
             </motion.span>
             
             <motion.h2
@@ -34,9 +34,9 @@ const CTASection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6"
+              className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6"
             >
-              <span className="text-gradient">$499</span>
+              <span className="text-gradient">Silent SX-809</span>
             </motion.h2>
             
             <motion.p
@@ -46,8 +46,8 @@ const CTASection = () => {
               viewport={{ once: true }}
               className="text-muted-foreground text-xl max-w-xl mx-auto mb-10"
             >
-              Free shipping worldwide. 30-day money-back guarantee. 
-              2-year premium warranty included.
+              Immerse yourself in a sonic adventure so authentic and immersive 
+              that you'll feel compelled to reach out and touch the sound itself.
             </motion.p>
             
             <motion.div
@@ -58,10 +58,10 @@ const CTASection = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <button className="px-10 py-5 bg-gradient-primary text-primary-foreground font-display font-semibold text-lg rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 glow-effect">
-                Order NOVA PRO
+                Order SX-809
               </button>
               <button className="px-10 py-5 border border-border text-foreground font-display font-semibold text-lg rounded-full hover:bg-secondary transition-all duration-300 flex items-center justify-center gap-2">
-                <span>Compare Models</span>
+                <span>Contact Us</span>
               </button>
             </motion.div>
           </div>
