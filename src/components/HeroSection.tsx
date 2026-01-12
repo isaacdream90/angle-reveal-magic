@@ -16,7 +16,7 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          Introducing
+          Wireless Headphones
         </motion.span>
         
         <motion.h1 
@@ -25,8 +25,8 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          <span className="text-gradient glow-text">NOVA</span>
-          <span className="text-foreground"> PRO</span>
+          <span className="text-gradient glow-text">SX</span>
+          <span className="text-foreground">-809</span>
         </motion.h1>
         
         <motion.p 
@@ -35,8 +35,8 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          Experience sound like never before. Immersive audio meets 
-          revolutionary design.
+          Experience sound like never before. Advanced technology, powerful bass, 
+          and outstanding comfort in every situation.
         </motion.p>
         
         <motion.div 
@@ -46,7 +46,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.9 }}
         >
           <button className="px-8 py-4 bg-gradient-primary text-primary-foreground font-display font-semibold rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 glow-effect">
-            Pre-Order Now
+            Order Now
           </button>
           <button className="px-8 py-4 neon-border text-foreground font-display font-semibold rounded-full hover:bg-primary/10 transition-all duration-300">
             Learn More
@@ -60,7 +60,7 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.1 }}
         >
-          {['Party', 'Fa Ins', 'Cinema', 'Corporate'].map((tag) => (
+          {['Silent Events', 'Parties', 'Fitness', 'Weddings', 'Outdoor'].map((tag) => (
             <span 
               key={tag}
               className="px-6 py-2 rounded-full border border-primary/30 text-foreground/80 text-sm font-medium hover:border-primary/60 hover:bg-primary/5 transition-all cursor-pointer"

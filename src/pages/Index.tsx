@@ -8,50 +8,50 @@ import Navbar from '@/components/Navbar';
 
 const productSections = [
   {
-    title: 'Immersive Sound',
+    title: 'Excellent Sound Quality',
     subtitle: '01 — Audio',
-    description: 'Custom 50mm titanium-coated drivers deliver studio-quality audio with exceptional clarity across the entire frequency spectrum. Feel every beat, hear every detail.',
+    description: 'Equipped with high-quality transducers and 40mm Mylar speakers, the SX-809 delivers rich, dynamic sound with deep and warm bass frequencies. The Super Power Bass (SPB) system enhances every beat.',
     features: [
-      'Hi-Res Audio certified',
-      'Custom-tuned acoustic chambers',
-      'Dynamic bass enhancement',
-      'Crystal-clear highs',
+      'Hi-Res Audio with 40mm Mylar speakers',
+      'Super Power Bass (SPB) system',
+      'Deep and warm bass frequencies',
+      'Crystal-clear sound reproduction',
     ],
     align: 'left' as const,
   },
   {
-    title: 'Silence On Demand',
-    subtitle: '02 — Noise Cancellation',
-    description: 'Industry-leading active noise cancellation with 8 precision microphones. Block out the world or let it in with transparency mode.',
+    title: 'Eye-Catching RGB Lights',
+    subtitle: '02 — Visual Experience',
+    description: 'Two large RGB LED lights on the ear cups add a unique and eye-catching visual effect, making the SX-809 perfect for silent disco events and nighttime use.',
     features: [
-      'Adaptive ANC technology',
-      'Transparency mode',
-      '8 beam-forming microphones',
-      'Wind noise reduction',
+      'Dual RGB LED light system',
+      'Multiple color modes',
+      'Perfect for silent disco',
+      'Nighttime visibility',
     ],
     align: 'right' as const,
   },
   {
-    title: 'All-Day Comfort',
+    title: 'Ultimate Comfort',
     subtitle: '03 — Design',
-    description: 'Aerospace-grade aluminum frame with memory foam cushions. Designed for hours of comfortable listening without fatigue.',
+    description: 'The ergonomic design, combined with soft, comfortable ear cushions, ensures maximum comfort even during extended listening sessions. Foldable design makes it easy to transport.',
     features: [
-      'Memory foam ear cushions',
-      'Adjustable headband',
+      'Soft ear cushions',
+      'Ergonomic headband',
+      'Foldable design',
       'Lightweight construction',
-      'Breathable materials',
     ],
     align: 'left' as const,
   },
   {
-    title: 'Endless Power',
-    subtitle: '04 — Battery',
-    description: 'Up to 60 hours of playback on a single charge. Quick charge gives you 5 hours of listening in just 10 minutes.',
+    title: 'Wireless Freedom',
+    subtitle: '04 — Connectivity',
+    description: 'UHF/RF wireless technology with FM modulation provides reliable, interference-free audio transmission. Integrated lithium battery offers up to 10 hours of playback.',
     features: [
-      '60-hour battery life',
-      'USB-C fast charging',
-      '10-min quick charge',
-      'Battery optimization AI',
+      'UHF/RF wireless system',
+      'FM modulation technology',
+      'Up to 10 hours battery life',
+      'Channel selector & volume control',
     ],
     align: 'right' as const,
   },
@@ -110,7 +110,7 @@ const Index = () => {
         <footer className="relative z-10 py-12 border-t border-primary/20">
           <div className="container mx-auto px-6 text-center">
             <p className="text-muted-foreground text-sm">
-              © 2025 NOVA Audio. All rights reserved.
+              © 2025 Silent SX-809. Patent No. 101677. All rights reserved.
             </p>
           </div>
         </footer>
